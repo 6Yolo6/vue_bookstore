@@ -1,0 +1,22 @@
+server:
+  port: 8899
+  servlet.context-path: /bookstore
+
+spring:
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://http:47.115.231.72:3306/bookstore?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+#    username: root
+#    username: bookstore
+#    password: Root@123
+    driver-class-name: org.sqlite.JDBC
+#    url: jdbc:sqlite:D:/vue/bookstore.db
+    url: jdbc:sqlite::resource:static/bookstore.db
+    username: root
+    password: root
+  devtools.restart.enabled: true
+  devtools.restart.additional-paths: src/main/java
+  devtools.restart.poll-interval: 2s
+  devtools.restart.quiet-period: 1s
+  freemarker.cache: false
+  mvc.pathmatch.matching-strategy: ANT_PATH_MATCHER
